@@ -1,0 +1,37 @@
+*{
+    cursor: none;
+    user-select: none;
+}
+
+.big-circle .circle{
+    position: fixed;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 9999;
+    border-radius: 50%;
+    transition: 500ms, transform 100ms;
+    user-select: none;
+    pointer-events: none;
+    -webkit-backdrop-filter: invert(0.85) grayscale(1);
+    backdrop-filter: invert(0.85) grayscale(1);
+}
+
+.big-circle .dot{
+    position: fixed;
+    box-sizing: border-box;
+    width: 6px;
+    height: 6px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    pointer-events: none;
+    transition: 250ms, transform 75ms;
+    -webkit-backdrop-filter: invert(0.85) grayscale(1);
+    backdrop-filter: invert(0.85) grayscale(1);
+}
