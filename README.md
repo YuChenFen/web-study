@@ -3,6 +3,7 @@
 - screen 浏览器窗口之间的通信（localStorage）
 - flip flip技术
 - svg-circle 一个有意思的svg圆形动画
+- svg-rect svg矩形动画
 - mouse-parallax 鼠标移动视差效果
 - cursor-follow 鼠标跟随效果
 - clock 时钟
