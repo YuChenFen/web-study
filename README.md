@@ -7,3 +7,4 @@
 - mouse-parallax 鼠标移动视差效果
 - cursor-follow 鼠标跟随效果
 - clock 时钟
+- drag 拖动布局示例（可通过拖拽上传照片或更改元素颜色查看效果）

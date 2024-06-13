@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
+
+.placeholding{
+    padding: 2px;
+}
+
+.box>div{
+    pointer-events: none;
+}
+
+.box{
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+.box-hover{
+    border-color: black;
+}
