@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fourier</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="action">
+        <input type="file" id="file-input">
+        <div>
+            <span>圆圈个数</span>
+            <input type="number" id="circle-num">
+        </div>
+        <div>
+            <span>采样间隔</span>
+            <input type="number" id="path-delta" step="0.01" min="0.001">
+        </div>
+        <div>
+            <span>路径缩放</span>
+            <input type="number" id="path-scale">
+        </div>
+        <div>
+            <span>显示原点集</span>
+            <input type="checkbox" id="show-path-points">
+        </div>
+        <div>
+            <span>显示圆圈</span>
+            <input type="checkbox" id="show-circles">
+        </div>
+        <div>
+            <span>显示向量集</span>
+            <input type="checkbox" id="show-vector">
+        </div>
+        <div>
+            <span>显示轨迹线</span>
+            <input type="checkbox" id="show-points">
+        </div>
+        <div>
+            <span>显示时域图</span>
+            <input type="checkbox" id="show-pssine">
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./math.js"></script>
+<script type="text/javascript" src="./svg.js"></script>
+<script type="text/javascript" src="./draw.js"></script>
+<script type="text/javascript" src="./utils.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+</html>
