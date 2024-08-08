@@ -10,3 +10,4 @@
 - drag 拖动布局示例（可通过拖拽上传照片或更改元素颜色查看效果）
 - fourier fourier级数绘图
 - QRcode 二维码生成器（canvas绘图）
+- PWA PWA简单示例

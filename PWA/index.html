@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA</title>
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <h1>PWA</h1>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(function (registration) {
+                    console.log('连接成功:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('连接失败:', error);
+                });
+        }
+        if (Notification.permission === 'default') {
+            Notification.requestPermission();
+        }
+        if (!navigator.onLine) {
+            new Notification('网络已断开', { body: "网络已断开，请检查网络连接" });
+        }
+        window.addEventListener('online', function () {
+            new Notification('网络已连接');
+        });
+    </script>
+</body>
+
+</html>
