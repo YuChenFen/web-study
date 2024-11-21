@@ -11,3 +11,4 @@
 - fourier fourier级数绘图
 - QRcode 二维码生成器（canvas绘图）
 - PWA PWA简单示例
+- background 背景模板
