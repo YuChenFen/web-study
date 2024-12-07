@@ -9,8 +9,8 @@ class Paintbrush {
         this.positions = [];
         this.lineWidths = [];
         this.lastMoveTime = Date.now();
-        this.minWidth = 5
-        this.maxWidth = 10
+        this.minWidth = 3
+        this.maxWidth = 8
         this.lastLineWidth = 5
         this.maxSpeed = 10
         this.minSpeed = 5
@@ -147,3 +147,8 @@ canvas.style.width = window.innerWidth + 'px'
 canvas.style.height = window.innerHeight + 'px'
 const paintbrush = new Paintbrush(canvas)
 
+const mouse = document.getElementById('mouse')
+document.addEventListener('mousemove', (e) => {
+    mouse.style.left = e.clientX + 'px'
+    mouse.style.top = e.clientY + 'px'
+})

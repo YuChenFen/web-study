@@ -8,7 +8,7 @@ function draw(instance, index) {
     ctx.save()
     ctx.lineCap = 'round'
     // ctx.lineJoin = 'round'
-    const color = '#000000'
+    const color = '#ff0000'
     ctx.strokeStyle = color;
     // ctx.shadowBlur = 5;
     // ctx.shadowColor = color;
