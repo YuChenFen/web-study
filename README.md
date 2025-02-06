@@ -13,3 +13,4 @@
 - PWA PWA简单示例
 - background 背景模板
 - paintbrush 画笔
+- music-page 音频可视化
