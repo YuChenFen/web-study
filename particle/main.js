@@ -1,5 +1,5 @@
 // Canvas 初始化
-const canvas = document.getElementById('canvas1');
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const dpr = window.devicePixelRatio;
 canvas.width = window.innerWidth * dpr;

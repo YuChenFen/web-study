@@ -15,3 +15,4 @@
 - paintbrush 画笔
 - music-page 音频可视化
 - particle 粒子效果
+- boids Boids算法
