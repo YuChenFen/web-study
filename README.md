@@ -14,3 +14,4 @@
 - background 背景模板
 - paintbrush 画笔
 - music-page 音频可视化
+- particle 粒子效果
