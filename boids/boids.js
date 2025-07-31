@@ -55,10 +55,10 @@ class Boid {
         this.acceleration = { x: 0, y: 0 };
 
         // 边界检查，如果超出画布则从另一边出现
-        if (this.position.x < 0) this.position.x = canvas.width;
-        if (this.position.y < 0) this.position.y = canvas.height;
-        if (this.position.x > canvas.width) this.position.x = 0;
-        if (this.position.y > canvas.height) this.position.y = 0;
+        if (this.position.x < 0) this.position.x = this.canvas.width;
+        if (this.position.y < 0) this.position.y = this.canvas.height;
+        if (this.position.x > this.canvas.width) this.position.x = 0;
+        if (this.position.y > this.canvas.height) this.position.y = 0;
     }
 
     // 绘制Boid

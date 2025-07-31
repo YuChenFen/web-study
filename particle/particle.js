@@ -1,15 +1,27 @@
 class Particle {
     constructor(x, y, canvas) {
+        this.ctx = canvas.getContext('2d');
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.ctx = canvas.getContext('2d');
         this.baseX = x;
         this.baseY = y;
         this.vx = 0;
         this.vy = 0;
         this.size = 1;
-        this.color = '#000000';
+        this.color = {
+            r: Math.random() * 255,
+            g: Math.random() * 255,
+            b: Math.random() * 255
+        };
+        this.baseColor = {
+            r: Math.random() * 255,
+            g: Math.random() * 255,
+            b: Math.random() * 255
+        };
+        this.vColor = { r: 0, g: 0, b: 0 }
         this.alpha = 1.0;
+        this.baseAlpha = 0.5;
+        this.vAlpha = 0.0;
         this.elasticityFactor = 0.05;
     }
 
@@ -20,7 +32,7 @@ class Particle {
         this.vy += dy * this.elasticityFactor;
 
         // 鼠标事件
-        if(mouse.speed){
+        if (mouse.speed) {
             let mx = mouse.x;
             let my = mouse.y;
             // 当前点到鼠标点距离平方
@@ -41,11 +53,26 @@ class Particle {
         this.vy *= 0.6;
         this.x += this.vx;
         this.y += this.vy;
+
+        // 颜色
+        this.vColor.r += (this.baseColor.r - this.color.r) * this.elasticityFactor;
+        this.vColor.g += (this.baseColor.g - this.color.g) * this.elasticityFactor;
+        this.vColor.b += (this.baseColor.b - this.color.b) * this.elasticityFactor;
+        this.vAlpha += (this.baseAlpha - this.alpha) * this.elasticityFactor;
+        this.vColor.r *= 0.6;
+        this.vColor.g *= 0.6;
+        this.vColor.b *= 0.6;
+        this.vAlpha *= 0.6;
+
+        this.color.r += this.vColor.r;
+        this.color.g += this.vColor.g;
+        this.color.b += this.vColor.b;
+        this.alpha += this.vAlpha;
     }
 
     draw() {
         if (this.alpha <= 0) return;
-        this.ctx.fillStyle = this.color;
+        this.ctx.fillStyle = `rgba(${this.baseColor.r}, ${this.baseColor.g}, ${this.baseColor.b}, ${this.baseAlpha})`;
         this.ctx.beginPath();
         this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         this.ctx.fill();
