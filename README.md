@@ -16,3 +16,4 @@
 - music-page 音频可视化
 - particle 粒子效果
 - boids Boids算法
+- video-random 视觉暂留（根据上传的视频进行像素修改）
